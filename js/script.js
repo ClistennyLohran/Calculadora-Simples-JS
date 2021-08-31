@@ -11,10 +11,10 @@ function abrirBarraLateral() {
   if(configValue == false) {
     containerLeft.style.left = "0px";
     configValue = true;
-  }else {
-    containerLeft.style.left = "-280px";
-    configValue = false;
+    return;
   }
+  containerLeft.style.left = "-280px";
+  configValue = false;
 }
 function calcular() {
   let numero1 = Number(document.getElementById('number1').value);
@@ -45,38 +45,36 @@ function calcular() {
     alert("Verifique se você preencheu corretamente!");
   }
 }
-function verificar() {
+function verificarPreenchimentoTexto() {
   let pegaNumero1 = document.getElementById('number1');
   let pegaNumero2 = document.getElementById('number2');
   if(pegaNumero1.value == "" || pegaNumero2.value == "") {
     mostraResultado.innerText = 'Resultado';
   }
 }
-function colorVerify() {
-  let pegaCorPrimaria = document.getElementById('paletaPrimaria').value;
-  let pegaCorSecundaria = document.getElementById('paletaSecundaria').value;
-  let pegaCorTerciaria = document.getElementById('paletaTerciaria').value;
-  let pegaCorTexto = document.getElementById('paletaTexto').value;
+function alterarCor() {
+  let codigoCorPrimaria = document.getElementById('paletaPrimaria').value;
+  let codigoCorSecundaria = document.getElementById('paletaSecundaria').value;
+  let codigoCorTerciaria = document.getElementById('paletaTerciaria').value;
+  let codigoCorTexto = document.getElementById('paletaTexto').value;
 
-  let corPrimaria = document.getElementById('corPrimaria');
-  let corSecundaria = document.getElementById('corSecundaria');
-  let corTerciaria = document.getElementById('corTerciaria');
-  let corTexto = document.getElementById('corTexto');
+  let textoCorPrimaria = document.getElementById('corPrimaria');
+  let textoCorSecundaria = document.getElementById('corSecundaria');
+  let textoCorTerciaria = document.getElementById('corTerciaria');
+  let textoCorTexto = document.getElementById('corTexto');
 
-  corPrimaria.value = pegaCorPrimaria.toUpperCase();
-  corSecundaria.value = pegaCorSecundaria.toUpperCase();
-  corTerciaria.value = pegaCorTerciaria.toUpperCase();
-  corTexto.value = pegaCorTexto.toUpperCase();
+  textoCorPrimaria.value = codigoCorPrimaria.toUpperCase();
+  textoCorSecundaria.value = codigoCorSecundaria.toUpperCase();
+  textoCorTerciaria.value = codigoCorTerciaria.toUpperCase();
+  textoCorTexto.value = codigoCorTexto.toUpperCase();
 
-  let valorCorPrimaria = document.documentElement.style.setProperty('--corPrimaria', pegaCorPrimaria);
-  let valorCorSecundaria = document.documentElement.style.setProperty('--corSecundaria', pegaCorSecundaria);
-  let valorCorTerciaria = document.documentElement.style.setProperty('--corTerciaria', pegaCorTerciaria);
-  let valorCorTexto = document.documentElement.style.setProperty('--corTexto', pegaCorTexto);
-
-  config.style.color = document.documentElement.style.getPropertyValue('--corSecundaria');
+  document.documentElement.style.setProperty('--corPrimaria', codigoCorPrimaria);
+  document.documentElement.style.setProperty('--corSecundaria', codigoCorSecundaria);
+  document.documentElement.style.setProperty('--corTerciaria', codigoCorTerciaria);
+  document.documentElement.style.setProperty('--corTexto', codigoCorTexto);
 }
 
-function seletorDeFonte() {
+function alterarFonte() {
   let pegarCampoFontes = document.getElementById('fontesSite').value;
 
   switch(pegarCampoFontes) {
@@ -95,12 +93,13 @@ function seletorDeFonte() {
   }
 }
 
-//Onload
+// Cores iniciais pré definidas.
 
-paletaPrimaria.value = '#eeeeee';
-paletaSecundaria.value = '#3593ff';
-paletaTerciaria.value = '#77b7ff';
+paletaPrimaria.value = '#0F0F0F';
+paletaSecundaria.value = '#0053B3';
+paletaTerciaria.value = '#0077FF';
+paletaTexto.value = "#EAEBED";
 
-setInterval(verificar, 300);
-setInterval(colorVerify, 100);
-setInterval(seletorDeFonte, 300);
+setInterval(verificarPreenchimentoTexto, 300);
+setInterval(alterarCor, 100);
+setInterval(alterarFonte, 300);

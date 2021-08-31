@@ -18,10 +18,10 @@ ul, ol, li {
 
 /* Colors */
 :root {
-  --corPrimaria: #eeeeee;
-  --corSecundaria: #3593ff;
-  --corTerciaria: #77b7ff;
-  --corTexto: #000000;
+  --corPrimaria: #0F0F0F;
+  --corSecundaria: #0053B3;
+  --corTerciaria: #0077FF;
+  --corTexto: #EAEBED;
 }
 
 p {
@@ -254,6 +254,8 @@ input[type=number]::-webkit-inner-spin-button {
   width: 280px;
   height: 100vh;
   background-color: var(--corPrimaria);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-transition: 0.5s ease-in-out;
