@@ -17,7 +17,7 @@ p {
 
   color: var(--corSecundaria);
 }
-.container-geral {
+.containerGeral {
   position: absolute;
   display: flex;
 
@@ -31,269 +31,260 @@ p {
 
   transition: 0.5s ease-in-out;
   z-index: 0;
-}
-.container-calc {
-  position: absolute;
-  display: flex;
-
-  flex-direction: column;
-
-  width: 600px;
-  height: 360px;
-
-  border-radius: 15px;
-
-  background-color: var(--corPrimaria);
-  transition: 0.5s ease-in-out;
-}
-.container-calc h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  color: var(--corSecundaria);
-}
-.container-calc form {
-  display: flex;
-
-  flex-direction: column;
-}
-.container-calc::before {
-  content: "";
-  position: absolute;
-
-  top: -2px;
-  left: -2px;
-
-  width: 604px;
-  height: 364px;
-
-  border-radius: 17px;
-
-  background-color: var(--corTerciaria);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-  z-index: -1;
-}
-.containerCor {
-  margin-top: 30px;
-
-  padding: 15px;
-
-  width: 200px;
-
-  background-color: var(--corPrimaria);
-
-  border: 2px solid var(--corTerciaria);
-  border-radius: 10px;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: 0.5s ease-in-out;
-}
-.containerCor i {
-  color: var(--corSecundaria);
-  cursor: pointer;
-
-  transition: 0.3s ease-in-out;
-}
-.containerCor i:hover {
-  color: var(--corTerciaria);
-}
-.colorTextBox {
-  width: 70px;
-  height: 20px;
-
-  text-align: center;
-
-  border: 2px solid var(--corSecundaria);
-  border-radius: 5px;
-
-  color: var(--corTexto);
-
-  background-color: transparent;
-
-  outline: none;
-  transition: 0.3s ease-in-out;
-}
-.colorTextBox:focus {
-  border: 2px solid var(--corTerciaria);
-}
-
-/* Inputs type number */
-
-.selectOp {
-  width: 110px;
-  height: 25px;
+  .containerLeft {
+    position: absolute;
+    display: flex;
   
-  border: 1px solid var(--corSecundaria);
-  border-radius: 5px;
-
-  outline: none;
-  color: var(--corSecundaria);
-  background-color: transparent;
-}
-.numberField {
-  outline: none;
-
-  text-align: center;
-
-  border-radius: 5px;
-  border: 1px solid var(--corSecundaria);
-
-  color: var(--corTexto);
-
-  width: 240px;
-  height: 25px;
-
-  margin-top: 5px;
-  margin-bottom: 5px;
-
-  background-color: transparent;
-}
-.btn {
-  background-color: transparent;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  color: var(--corSecundaria);
-
-  border: 1px solid var(--corSecundaria);
-  border-radius: 5px;
-
-  padding: 10px 84px;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  transition: 0.3s ease-in-out;
-}
-.btn:hover {
-  background-color: var(--corSecundaria);
-  color: #eeeeee;
-}
+    flex-direction: column;
+  
+    align-items: center;
+  
+    text-align: center;
+  
+    left: -280px;
+    top: 0;
+  
+    width: 280px;
+    height: 100vh;
+  
+    background-color: var(--corPrimaria);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  
+    overflow-y: scroll;
+    overflow-x: hidden;
+  
+    transition: 0.5s ease-in-out;
+    p {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .containerLeft::before {
+      content: "";
+      position: absolute;
+    
+      right: -2px;
+      top: 0;
+    
+      width: 100%;
+      height: 100%;
+    
+      background-color: var(--corTerciaria);
+      
+      box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
+    
+      z-index: -1;
+    } // Close .containerLeft::before
+    .containerCor {
+      margin-top: 30px;
+    
+      padding: 15px;
+    
+      width: 200px;
+    
+      background-color: var(--corPrimaria);
+    
+      border: 2px solid var(--corTerciaria);
+      border-radius: 10px;
+    
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: 0.5s ease-in-out;
+      i {
+        color: var(--corSecundaria);
+        cursor: pointer;
+      
+        transition: 0.3s ease-in-out;
+      }
+      i:hover {
+        color: var(--corTerciaria);
+      }
+      .colorTextBox {
+        width: 70px;
+        height: 20px;
+      
+        text-align: center;
+      
+        border: 2px solid var(--corSecundaria);
+        border-radius: 5px;
+      
+        color: var(--corTexto);
+      
+        background-color: transparent;
+      
+        outline: none;
+        transition: 0.3s ease-in-out;
+      } // Close .colorTextBox
+      .colorTextBox:focus {
+        border: 2px solid var(--corTerciaria);
+      } // Close .colorTextBox:focus
+      .colorPick {
+        width: 180px;
+        height: 30px;
+      
+        outline: none;
+        border: none;
+      
+        background-color: transparent;
+      
+        cursor: pointer;
+      } // Close .colorPick
+      .codCor {
+        font-size: 12px;
+      } // Close .codCor
+      .setColor {
+        color: var(--corSecundaria);
+        cursor: pointer;
+      
+        transition: 0.3s ease-in-out;
+      } // Close .setColor
+      .setColor:hover {
+        color: var(--corTerciaria);
+      } // Close .setColor:hover
+    } // Close .containerCor
+    .copyright {
+      padding-top: 30px;
+      font-size: 14px;
+    } // Close .copyright
+  } // Close .containerLeft
+  .containerCalc {
+    position: absolute;
+    display: flex;
+  
+    flex-direction: column;
+  
+    width: 600px;
+    height: 360px;
+  
+    border-radius: 15px;
+  
+    background-color: var(--corPrimaria);
+    transition: 0.5s ease-in-out;
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    
+      color: var(--corSecundaria);
+    } // Close h1
+    form {
+      display: flex;
+    
+      flex-direction: column;
+      .numberField {
+        outline: none;
+      
+        text-align: center;
+      
+        border-radius: 5px;
+        border: 1px solid var(--corSecundaria);
+      
+        color: var(--corTexto);
+      
+        width: 240px;
+        height: 25px;
+      
+        margin-top: 5px;
+        margin-bottom: 5px;
+      
+        background-color: transparent;
+      } // Close .numberField
+      .btn {
+        background-color: transparent;
+      
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
+        color: var(--corSecundaria);
+      
+        border: 1px solid var(--corSecundaria);
+        border-radius: 5px;
+      
+        padding: 10px 84px;
+        text-transform: uppercase;
+      
+        cursor: pointer;
+      
+        transition: 0.3s ease-in-out;
+      } // Close .btn
+      .btn:hover {
+        background-color: var(--corSecundaria);
+        color: #eeeeee;
+      } // Close .btn:hover
+      .resultado {
+        position: relative;
+        display: flex;
+      
+        align-items: center;
+        justify-content: center;
+      
+        width: 240px;
+        height: 25px;
+      
+        border: 1px solid var(--corSecundaria);
+        border-radius: 5px;
+      
+        background-color: var(--corPrimaria);
+      
+        transition: 0.5s ease-in-out;
+        p {
+          font-size: 13px;
+        
+          color: var(--corTexto);
+        }
+      } // Close .resultado
+    } // Close form
+  } // Close .container-calc
+  .containerCalc::before {
+    content: "";
+    position: absolute;
+  
+    top: -2px;
+    left: -2px;
+  
+    width: 604px;
+    height: 364px;
+  
+    border-radius: 17px;
+  
+    background-color: var(--corTerciaria);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+    z-index: -1;
+  } // Close .containerCalc::before
+  .configSite {
+    position: absolute;
+  
+    top: 0;
+    right: 0;
+  
+    padding: 10px;
+  
+    color: var(--corSecundaria);
+    transition: 0.3s ease-in-out;
+  
+    cursor: pointer;
+    i {
+      transition: 0.3s ease-in-out;
+    } // Close i
+    i:hover {
+      color: var(--corTerciaria);
+    } // Close i:hover
+  } // Close .configSite
+  .selectOp {
+    width: 110px;
+    height: 25px;
+    
+    border: 1px solid var(--corSecundaria);
+    border-radius: 5px;
+  
+    outline: none;
+    color: var(--corSecundaria);
+    background-color: transparent;
+  } // Close .selectOp
+} // Close .containerGeral
 
 /* Input type number remover spin */
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-
-/* Resultado */
-
-.resultado {
-  position: relative;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 240px;
-  height: 25px;
-
-  border: 1px solid var(--corSecundaria);
-  border-radius: 5px;
-
-  background-color: var(--corPrimaria);
-
-  transition: 0.5s ease-in-out;
-}
-.resultado p {
-  font-size: 13px;
-
-  color: var(--corTexto);
-}
-
-/* Container do Color Picker */
-
-.configSite {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  padding: 10px;
-
-  color: var(--corSecundaria);
-  transition: 0.3s ease-in-out;
-
-  cursor: pointer;
-}
-.configSite i {
-  transition: 0.3s ease-in-out;
-}
-.configSite i:hover {
-  color: var(--corTerciaria);
-}
-.container-left {
-  position: absolute;
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  left: -280px;
-  top: 0;
-
-  width: 280px;
-  height: 100vh;
-
-  background-color: var(--corPrimaria);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-  overflow-y: scroll;
-  overflow-x: hidden;
-
-  transition: 0.5s ease-in-out;
-}
-.container-left p {
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-.container-left::before {
-  content: "";
-  position: absolute;
-
-  right: -2px;
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--corTerciaria);
-  
-  box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
-
-  z-index: -1;
-}
-.colorPick {
-  width: 180px;
-  height: 30px;
-
-  outline: none;
-  border: none;
-
-  background-color: transparent;
-
-  cursor: pointer;
-}
-.codCor {
-  font-size: 12px;
-}
-.setColor {
-  color: var(--corSecundaria);
-  cursor: pointer;
-
-  transition: 0.3s ease-in-out;
-}
-.setColor:hover {
-  color: var(--corTerciaria);
-}
-.copyright {
-  padding-top: 30px;
-  font-size: 14px;
 }
 
 /* Scrollbar */
