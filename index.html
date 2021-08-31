@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora</title>
+    <script src="https://kit.fontawesome.com/1b93dabb06.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-geral">
+      <div id="containerLeft" class="container-left">
+        <p class="logo"><i class="fas fa-palette fa-4x"></i></p>
+        <div class="containerCor primaria">
+          <p>Cor Primária</p>
+          <input type="color" class="colorPick" id="paletaPrimaria">
+          <input type="text" readonly="true" class="colorTextBox" id="corPrimaria">
+        </div>
+        <div class="containerCor secundaria">
+          <p>Cor Secundaria</p>
+          <input type="color" class="colorPick" id="paletaSecundaria">
+          <input type="text" readonly="true" class="colorTextBox" id="corSecundaria">
+        </div>
+        <div class="containerCor terciaria">
+          <p>Cor Terciaria</p>
+          <input type="color" class="colorPick" id="paletaTerciaria">
+          <input type="text" readonly="true" class="colorTextBox" id="corTerciaria">
+        </div>
+        <div class="containerCor texto">
+          <p>Cor dos Paragrafos</p>
+          <input type="color" class="colorPick" id="paletaTexto">
+          <input type="text" readonly="true" class="colorTextBox" id="corTexto">
+        </div>
+        <div class="containerCor seletorFontes">
+          <p>Fonte do Site</p>
+          <select name="fontes" id="fontesSite" class="selectOp">
+            <option value="fonte01">Arial Comum</option>
+            <option value="fonte02">Monoton</option>
+            <option value="fonte03">Roboto</option>
+          </select>
+        </div>
+        <p class="copyright">&copy; Desenvolvido por Lohran</p>
+      </div>
+      <p class="configSite" id="config"><i class="fas fa-cog fa-lg"></i></p>
+      <div class="container-calc">
+        <h1>Calculadora Simples</h1>
+        <form>
+          <input type="number" placeholder="Primeiro Número" class="numberField" id="number1">
+
+          <select name="tipoCalculo" id="tipoCalculo" class="selectOp">
+            <option value="somar">+ (Somar)</option>
+            <option value="subtrair">- (Subtrair)</option>
+            <option value="multiplicar">x (Multiplicar)</option>
+            <option value="dividir">/ (Dividir)</option>
+          </select>
+
+          <input type="number" placeholder="Segundo Número" class="numberField" id="number2">
+          <input type="button" value="Calcular" class="btn" id="btnCalcular">
+          <div class="resultado">
+            <p id="result">Resultado</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
